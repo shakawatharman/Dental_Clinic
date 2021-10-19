@@ -3,7 +3,7 @@ import { Card, CardGroup } from "react-bootstrap";
 
 const Pricing = () => {
   return (
-    <div className="container">
+    <div className="container" id="pricing">
       <h1 className="text-center text-primary mt-5">Our Dental Pricing</h1>
       <p className="text-center mb-5">select any of these</p>
       <CardGroup>

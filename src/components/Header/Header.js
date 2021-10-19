@@ -1,56 +1,56 @@
 import React from "react";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import logo from "../../resources/logo.png";
-import './Header.css';
+import "./Header.css";
 const Header = () => {
+  const { user, logOut } = useAuth();
+
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid header-logo">
-          <a className="navbar-brand" href="#">
-            <img src={logo} alt="" />
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  FAQ
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Log in
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <div className="container" id="header">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Container>
+          <Navbar.Brand href="#home">
+            <img
+              src={logo}
+              width="150"
+              height="50"
+              className="d-inline-block align-top"
+              alt=""
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link className="text-dark fw-bold" href="#header">
+                Home
+              </Nav.Link>
+              <Nav.Link className="text-dark fw-bold" href="#pricing">
+                Pricing
+              </Nav.Link>
+              <Nav.Link className="text-dark fw-bold" href="#FAQ">
+                FAQ
+              </Nav.Link>
+              <Nav.Link className="text-dark fw-bold" href="#services">
+                Services
+              </Nav.Link>
+              {user?.email ? (
+                <Button onClick={logOut} variant="light">
+                  Logout
+                </Button>
+              ) : (
+                <Nav.Link as={Link} to="/login">
+                  Login
+                </Nav.Link>
+              )}
+              <Navbar.Text>
+                            Signed in as: <a href="#login">{user?.displayName}</a>
+                        </Navbar.Text>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div className="container">
+    <div className="container" id="FAQ">
       <h2 className="text-primary my-5 text-center text-uppercase"> Frequently Asked Questions</h2>
       <h4>What Are Digital Radiographs?</h4>
       <p>We are now able to offer our patients a new technological breakthrough! Digital radiographs require up to 90% less radiation than traditional x-rays and are environmentally friendly! They show us large crisp, electronic pictures of teeth, supporting bones and gums, undetectable by the naked eye.
