@@ -15,9 +15,10 @@ const useFirebase = () => {
 
   const googleSignIn = () => {
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider).then((result) => {
-      setUser(result.user);
-    });
+    return signInWithPopup(auth, googleProvider)
+    // .then((result) => {
+    //   setUser(result.user);
+    // });
   };
   useEffect(() => {
     const unSubscribed = onAuthStateChanged(auth, (user) => {

@@ -1,10 +1,10 @@
 import React from "react";
 import "./Appointment.css";
-import { Form, Button, Dropdown } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 const Appointment = () => {
   return (
-    <div id="appointment" className="container pt-2 w-50">
+    <div id="appointment" className="container mt-5 pt-2 w-50">
       <div className="text-center my-3">
         <h2>
           Book an <span className="text-primary">Appointment</span>
