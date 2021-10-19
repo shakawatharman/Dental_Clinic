@@ -7,20 +7,27 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Banner from './components/Home/Banner/Banner';
 import Login from './components/Login/Login';
+import Pricing from './components/Pricing/Pricing';
 import Register from './components/Register/Register';
+import Suggestion from './components/Suggestion/Suggestion';
+import AuthProvider from './context/AuthProvider';
 
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+     <AuthProvider>
+     <Header></Header>
       <Banner></Banner>
       <Register></Register>
       <Login></Login>
       
       <FAQ></FAQ>
       <Appointment></Appointment>
+      <Suggestion></Suggestion>
+      <Pricing></Pricing>
      <Footer></Footer>
+     </AuthProvider>
     </div>
   );
 }

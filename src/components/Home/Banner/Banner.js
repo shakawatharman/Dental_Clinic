@@ -1,4 +1,4 @@
-import treatment from "../../../resources/banner2.png"
+import treatment from "../../../resources/banner.jpg"
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Banner.css';
