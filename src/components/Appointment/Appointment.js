@@ -3,7 +3,7 @@ import { Form, Button } from "react-bootstrap";
 
 const Appointment = () => {
   return (
-    <div id="appointment" className="container my-5 pt-2 w-50">
+    <div id="appointment" className="container my-5 pt-2">
       <div className="text-center my-3">
         <h2>
           Book an <span className="text-primary">Appointment</span>
@@ -12,20 +12,35 @@ const Appointment = () => {
       <div>
         <Form.Group className="mb-3">
           <Form.Label>Your Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter Name" />
+          <Form.Control
+            className="border-0 shadow"
+            type="text"
+            placeholder="Enter Name"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3">
           <Form.Label>Your Address</Form.Label>
-          <Form.Control type="text" placeholder="Enter Address" />
+          <Form.Control
+            className="border-0 shadow"
+            type="text"
+            placeholder="Enter Address"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3">
           <Form.Label>Number</Form.Label>
-          <Form.Control type="number" placeholder="Phone Number" />
+          <Form.Control
+            className="border-0 shadow"
+            type="number"
+            placeholder="Phone Number"
+          />
         </Form.Group>
 
-        <Form.Select aria-label="Default select example">
+        <Form.Select
+          className="border-0 shadow"
+          aria-label="Default select example"
+        >
           <option>Type of Service</option>
           <option value="1">Fixing Implants</option>
           <option value="2">Crowns & Bridge Repair</option>

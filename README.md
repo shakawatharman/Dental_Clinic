@@ -1,4 +1,4 @@
-#  Project Name : Dental Clinic.
+# Project Name : Dental Clinic.
 
 Live Site Link: [Click here](https://dental-clinic-1ebcb.web.app/).
 
