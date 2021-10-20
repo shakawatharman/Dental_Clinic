@@ -21,16 +21,27 @@ const useFirebase = () => {
     
   };
 
-    const registerWithEmail = () => {
-      createUserWithEmailAndPassword(auth, email, password)
-      .then((userData) => {
+    // const registerWithEmail = () => {
+    //   createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userData) => {
        
-        const user= userData.user;
-        console.log(user)
+    //     const user= userData.user;
+    //     console.log(user)
        
-      })
-      
+    //   })
+    // }
+
+    const handleEmail = (e) =>{
+      console.log(e.target.value)
     }
+    const handlePassword = (e)=>{
+      console.log(e.target.value)
+    }
+    const handleRegisterClick = () =>{
+      handleEmail();
+      handlePassword();
+    }
+    
 
 
   useEffect(() => {
@@ -53,10 +64,14 @@ const useFirebase = () => {
   };
 
   return {
+    // registerWithEmail,
     googleSignIn,
     user,
     logOut,
-    registerWithEmail
+    handleEmail,
+    handlePassword,
+    handleRegisterClick
+   
   };
 };
 
