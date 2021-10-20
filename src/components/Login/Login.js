@@ -26,7 +26,7 @@ const Login = () => {
     signInWithEmail(email, password)
       .then((userData) => {
         const user = userData.user;
-        console.log(user);
+        history.push(redirect_url);
       })
       .catch((error) => {
         setError(error.message);
