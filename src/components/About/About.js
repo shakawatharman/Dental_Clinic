@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container">
+    <div className="container mt-5">
       Today, the Oral Health Foundation continues to be an independent charity
       that aims to improve the oral health of the public by providing free and
       impartial dental advice, by running educational campaigns and by informing

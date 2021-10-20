@@ -44,6 +44,7 @@ function App() {
       <Route path="/about">
         <About></About>
       </Route>
+      
       <PrivateRoute path="/service/:serviceId">
       <Service></Service>
       </PrivateRoute>

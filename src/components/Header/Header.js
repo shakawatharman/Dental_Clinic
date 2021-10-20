@@ -11,7 +11,7 @@ const Header = () => {
     <div className="container" id="header">
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">
+          <Nav.Link as={Link} to="/home">
             <img
               src={logo}
               width="150"
@@ -19,7 +19,7 @@ const Header = () => {
               className="d-inline-block align-top"
               alt=""
             />
-          </Navbar.Brand>
+          </Nav.Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
@@ -33,7 +33,7 @@ const Header = () => {
                 FAQ
               </Nav.Link>
               <Nav.Link as={Link} className="text-dark fw-bold" to="/about">
-                About Us
+                About us
               </Nav.Link>
               {user?.email ? (
                 <Button  className="text-danger fw-bold" onClick={logOut} variant="light">

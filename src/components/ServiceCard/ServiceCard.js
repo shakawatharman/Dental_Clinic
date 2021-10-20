@@ -19,7 +19,7 @@ const ServiceCard = ({service}) => {
                         <img src={image} alt="" />
               </div>
               <div className="service-data text-center p-3">
-                    <h3>{name}</h3>
+                    <h3 className="text-primary">{name}</h3>
                     <p>{description}</p>
                     <button onClick={handleService} className="btn btn-primary">See Details</button>
               </div>

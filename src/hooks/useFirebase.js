@@ -4,6 +4,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
+  createUserWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -14,12 +15,24 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
 
   const googleSignIn = () => {
+ 
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider)
-    // .then((result) => {
-    //   setUser(result.user);
-    // });
+    
   };
+
+    const registerWithEmail = () => {
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((userData) => {
+       
+        const user= userData.user;
+        console.log(user)
+       
+      })
+      
+    }
+
+
   useEffect(() => {
     const unSubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -27,17 +40,23 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+   
     });
+    return () => unSubscribed;
   }, []);
 
   const logOut = () => {
-    signOut(auth).then(() => {});
+  
+    signOut(auth).then(() => {})
+   
+    
   };
 
   return {
     googleSignIn,
     user,
     logOut,
+    registerWithEmail
   };
 };
 

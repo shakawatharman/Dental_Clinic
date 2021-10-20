@@ -4,7 +4,11 @@ import { Link,useHistory,useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Image from "../../resources/illustration.jpg";
 
+
+
 const Login = () => {
+  
+
   const history = useHistory();
   const location = useLocation();
   const {  googleSignIn } = useAuth();
@@ -15,6 +19,7 @@ const Login = () => {
     .then(result =>{
       history.push(redirect_url)
     })
+   
   }
  
 

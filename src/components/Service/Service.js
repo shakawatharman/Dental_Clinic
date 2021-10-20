@@ -1,40 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import useService from "../../hooks/useService";
 
 const Service = () => {
-    const { serviceId } = useParams();
-    const [services,setServices] = useState([]);
+  const [ services ] = useService();
+  const { serviceId } = useParams();
+  const [service, setService] = useState({});
 
-    useEffect(() => {
-       fetch('/data.json')
-           .then(res => res.json())
-           .then(data => {
-                setServices(data);
-           })
-           .catch(error=> console.log(error))
-   }, [serviceId])
-
-   
+  useEffect(() => {
+    const singleService = services.filter((service) => service.id == serviceId);
+    setService(singleService[0])
+  }, [services]);
   
-  const singleService = services.filter((service) => service.id === serviceId);
-  console.log(services);
-  
+  console.log(service);
 
   return (
     <div>
-      <div className="container">
+      <div className="container py-5">
         <div className="row">
           <div className="col-md-12 text-center">
-            <img style={{ width: "400px" }} src={singleService.image} alt="" />
-            <h2>{singleService.name}</h2>
+            <img className="m-auto" style={{ width: "400px" }} src={service?.image} alt="" />
+            <h2 className="my-4">{service?.name}</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Consectetur natus fuga quisquam nulla fugiat dignissimos, ipsum ea
-              quasi porro eaque temporibus? Ea earum quae ullam expedita ipsa
-              voluptatum iure quod reprehenderit ratione explicabo laudantium
-              vitae ipsum quam, cupiditate aut necessitatibus corrupti odit
-              mollitia, consequuntur quaerat aperiam est neque. Ipsa, tenetur.
+              {service?.details}
             </p>
           </div>
         </div>

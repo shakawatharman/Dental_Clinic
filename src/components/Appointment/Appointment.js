@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 
 const Appointment = () => {
   return (
-    <div id="appointment" className="container mt-5 pt-2 w-50">
+    <div id="appointment" className="container my-5 pt-2 w-50">
       <div className="text-center my-3">
         <h2>
           Book an <span className="text-primary">Appointment</span>
@@ -23,7 +23,7 @@ const Appointment = () => {
 
         <Form.Group className="mb-3">
           <Form.Label>Number</Form.Label>
-          <Form.Control type="number" placeholder="Phone" />
+          <Form.Control type="number" placeholder="Phone Number" />
         </Form.Group>
 
         <Form.Select aria-label="Default select example">
