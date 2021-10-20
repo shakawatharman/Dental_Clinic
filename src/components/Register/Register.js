@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -7,8 +7,38 @@ import Image from "../../resources/illustration.jpg";
 const Register = () => {
  
 
+  const {googleSignIn,registerWithEmail} = useAuth();
 
-  const {googleSignIn, handleEmail, handlePassword,handleRegisterClick} = useAuth();
+  const [email,setEmail] = useState("")
+  const [password,setPassword] = useState("")
+  const [error,setError] = useState("")
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  }
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const handleRegister = (e) =>{
+    e.preventDefault();
+    registerWithEmail(email,password)
+    .then((userData) => {
+       
+      const user= userData.user;
+      console.log(user);
+     
+    })
+    .catch(error=>{
+      setError(error.message)
+    })
+
+    
+  }
+ console.log(email);
+
+
+  
   return (
     <div className="container p-5">
       <div className="row  justify-content-center">
@@ -16,7 +46,7 @@ const Register = () => {
           <img src={Image} alt="" />
         </div>
         <div className="col-md-6 col-sm-12 shadow p-3 text-center">
-          <Form className="my-5">
+          <Form onSubmit={handleRegister} className="my-5">
             <h2 className="mb-5 text-primary"> Please Register</h2>
             <div className="mb-3">
             <Button onClick={googleSignIn} variant="secondary" size="md">
@@ -26,16 +56,16 @@ const Register = () => {
         
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" />
+              <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" required />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
+              <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
             </Form.Group>
             
-
-            <Button onClick={handleRegisterClick} variant="primary" type="submit">
+            <p className="text-danger">{error}</p>
+            <Button variant="primary" type="submit">
               Register
             </Button>
           </Form>

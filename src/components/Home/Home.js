@@ -1,8 +1,7 @@
 import React from 'react';
 import Appointment from '../Appointment/Appointment';
-import Pricing from '../Pricing/Pricing';
+import Dentists from '../Dentists/Dentists';
 import Services from '../Services/Services';
-import Suggestion from '../Suggestion/Suggestion';
 import Banner from './Banner/Banner';
 
 const Home = () => {
@@ -10,9 +9,7 @@ const Home = () => {
         <>
             <Banner></Banner>
             <Services></Services>
-            <Suggestion></Suggestion>
-           
-            <Pricing></Pricing>
+            <Dentists></Dentists>
             <Appointment></Appointment>
 
         </>

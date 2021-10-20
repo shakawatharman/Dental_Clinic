@@ -1,5 +1,4 @@
 import React from "react";
-import "./Appointment.css";
 import { Form, Button } from "react-bootstrap";
 
 const Appointment = () => {

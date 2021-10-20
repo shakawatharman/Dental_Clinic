@@ -1,0 +1,40 @@
+.single-doctor {
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 8.135px 18.271px 40px 0px rgba(0, 0, 0, 0.08);
+            box-shadow: 8.135px 18.271px 40px 0px rgba(0, 0, 0, 0.08);
+    padding: 50px 56px;
+    margin-top: 30px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+.doctor-profile {
+    border-radius: 50%;
+    width: 217px;
+    height: 217px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: 0px auto;
+}
+.doctor-profile img {
+    position: absolute;
+    left: 54%;
+    bottom: -5px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 4;
+}
+.doctor-profile::before {
+    background: #fc5185;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    border-radius: 50%;
+    top: -1px;
+}

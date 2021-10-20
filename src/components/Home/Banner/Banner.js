@@ -6,7 +6,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-       <div className="container my-5">
+       <div className="container-fluid mb-5">
            <Carousel>
   <Carousel.Item>
     <img

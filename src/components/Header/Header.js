@@ -8,7 +8,7 @@ const Header = () => {
   const { user, logOut } = useAuth();
 
   return (
-    <div className="container" id="header">
+    <div className="container-fluid" id="header">
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
           <Nav.Link as={Link} to="/home">
@@ -29,6 +29,9 @@ const Header = () => {
               <Nav.Link as={Link} className="text-dark fw-bold" to="/pricing">
                 Pricing
               </Nav.Link>
+              <Nav.Link as={Link} className="text-dark fw-bold" to="/consultation">
+                Consultation
+              </Nav.Link>
               <Nav.Link as={Link} className="text-dark fw-bold" to="/FAQ">
                 FAQ
               </Nav.Link>
@@ -36,17 +39,23 @@ const Header = () => {
                 About us
               </Nav.Link>
               {user?.email ? (
+               <>
                 <Button  className="text-danger fw-bold" onClick={logOut} variant="light">
                   Logout
                 </Button>
+               <Navbar.Text>
+               Signed in as: ({user?.email})
+           </Navbar.Text>
+               </>
+
               ) : (
                 <Nav.Link className="text-dark fw-bold" as={Link} to="/login">
                   Login
                 </Nav.Link>
               )}
-              <Navbar.Text>
-                            Signed in as: <a href="#login">{user?.displayName}</a>
-                        </Navbar.Text>
+             
+
+
             </Nav>
           </Navbar.Collapse>
         </Container>

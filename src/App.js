@@ -13,6 +13,7 @@ import Register from './components/Register/Register';
 import Service from './components/Service/Service';
 import AuthProvider from './context/AuthProvider';
 import About from './components/About/About';
+import Consultation from './components/Consultation/Consultation';
 
 
 function App() {
@@ -35,16 +36,18 @@ function App() {
       <Route path="/login">
         <Login></Login>
       </Route>
-      <Route path="/pricing">
+      <PrivateRoute path="/pricing">
         <Pricing></Pricing>
-      </Route>
+      </PrivateRoute>
       <Route path="/faq">
         <FAQ></FAQ>
       </Route>
       <Route path="/about">
         <About></About>
       </Route>
-      
+      <PrivateRoute path="/consultation">
+        <Consultation></Consultation>
+      </PrivateRoute>
       <PrivateRoute path="/service/:serviceId">
       <Service></Service>
       </PrivateRoute>

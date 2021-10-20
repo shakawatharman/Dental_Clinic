@@ -5,7 +5,8 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   createUserWithEmailAndPassword,
-  signOut,
+  signInWithEmailAndPassword ,
+  signOut
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 
@@ -21,26 +22,19 @@ const useFirebase = () => {
     
   };
 
-    // const registerWithEmail = () => {
-    //   createUserWithEmailAndPassword(auth, email, password)
-    //   .then((userData) => {
-       
-    //     const user= userData.user;
-    //     console.log(user)
-       
-    //   })
-    // }
+    const registerWithEmail = (email,password) => {
+      return createUserWithEmailAndPassword(auth, email, password)
+      
+      
+      
+    }
 
-    const handleEmail = (e) =>{
-      console.log(e.target.value)
+    const signInWithEmail = (email,password) => {
+    return  signInWithEmailAndPassword(auth, email, password)
+  
     }
-    const handlePassword = (e)=>{
-      console.log(e.target.value)
-    }
-    const handleRegisterClick = () =>{
-      handleEmail();
-      handlePassword();
-    }
+
+    
     
 
 
@@ -54,23 +48,24 @@ const useFirebase = () => {
    
     });
     return () => unSubscribed;
-  }, []);
+  },[auth]);
 
   const logOut = () => {
   
-    signOut(auth).then(() => {})
-   
+    signOut(auth).then(() => {
+     
+    }).catch((error) => {
+      console.log(error.message)
+    });
     
   };
 
   return {
-    // registerWithEmail,
+    registerWithEmail,
+    signInWithEmail,
     googleSignIn,
     user,
-    logOut,
-    handleEmail,
-    handlePassword,
-    handleRegisterClick
+    logOut
    
   };
 };

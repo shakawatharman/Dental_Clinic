@@ -1,9 +1,12 @@
 #  Project Name : Dental Clinic.
 
-Live Site Link [Click here](https://march-forward.netlify.app/).
+Live Site Link: [Click here](https://dental-clinic-1ebcb.web.app/).
 
 ## Project overview
-- This is an educational site for learners.
-- We provide some important courses for one's skill development.
-- Our available course are :  BCS Written, BCS Preli, Spoken English, Free Hand Writing, Digital Marketing, Beautiful Hand Writing, Basic Math, Skill Development, Language & Communication Course & Bank Job Preparation.
-- We always welcome the learners to our course. So anyone can purchase our courses by registering. Happy learning...
+
+- This is our official website. You can find our activities by scrolling.
+- We always provide standard services. Browse our website and find your desire service.
+- Dental problem is a very critical problem. But unfortunately people don't take this seriously. Don't forget to contact us if you need.
+- Always bear in mind that whenever you'll find any dental issue, immediately consult with a dentist near to you.
+- You will see some important suggestions from some renowned dentist. Follow these in your practical life.
+- We expect happy smile on your face every time. Keep smiling...
