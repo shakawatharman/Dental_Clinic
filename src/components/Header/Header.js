@@ -42,9 +42,9 @@ const Header = () => {
                 <Button  className="text-danger fw-bold" onClick={logOut} variant="light">
                   Logout
                 </Button>
-               <Navbar.Text>
-               Signed in as: ({user?.email})
-           </Navbar.Text>
+               <button className="bg-primary p-1 text-white fw-bold">
+               User: {user?.displayName}
+           </button>
                </>
 
               ) : (
