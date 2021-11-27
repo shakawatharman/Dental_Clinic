@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
+import './ServiceCard.css';
 
 const ServiceCard = ({ service }) => {
   const { id, name, image, description } = service;
