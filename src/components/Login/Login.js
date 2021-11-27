@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import Image from "../../resources/illustration.jpg";
 
 const Login = () => {
   const history = useHistory();
@@ -33,6 +32,8 @@ const Login = () => {
       });
   };
 
+  
+
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       history.push(redirect_url);
@@ -43,7 +44,7 @@ const Login = () => {
     <div className="container p-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <img src={Image} alt="" />
+          <img src="https://i.ibb.co/wY82WjW/illustration.jpg" alt="" />
         </div>
 
         <div className="col-md-6 col-sm-12 shadow p-3">

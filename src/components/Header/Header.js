@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import logo from "../../resources/logo.png";
 import "./Header.css";
 const Header = () => {
   const { user, logOut } = useAuth();
@@ -13,9 +12,9 @@ const Header = () => {
         <Container>
           <Nav.Link as={Link} to="/home">
             <img
-              src={logo}
-              width="150"
-              height="50"
+              src="https://i.ibb.co/XkDDwmp/cover.png"
+              width="250"
+              height="70"
               className="d-inline-block align-top"
               alt=""
             />

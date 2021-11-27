@@ -1,8 +1,5 @@
 import React from "react";
 import "./Dentists.css";
-import Milin from "../../resources/doctor1.png";
-import Salman from "../../resources/doctor2.png";
-import Santa from "../../resources/doctor3.png";
 
 const Dentists = () => {
   return (
@@ -20,7 +17,7 @@ const Dentists = () => {
             <div className="col-md-6 col-lg-4 col-12">
               <div className="single-doctor">
                 <div className="doctor-profile">
-                  <img src={Milin} alt="" />
+                  <img src="https://i.ibb.co/bNrVgwW/doctor1.png" alt="" />
                 </div>
                 <div className="doctor-info">
                   <h3>Darry Milin</h3>
@@ -31,7 +28,7 @@ const Dentists = () => {
             <div className="col-md-6 col-lg-4 col-12">
               <div className="single-doctor">
                 <div className="doctor-profile">
-                  <img src={Salman} alt="" />
+                  <img src="https://i.ibb.co/7KWyZmB/doctor2.png" alt="" />
                 </div>
                 <div className="doctor-info">
                   <h3>Salman Ahmed</h3>
@@ -42,7 +39,7 @@ const Dentists = () => {
             <div className="col-md-6 col-lg-4 col-12">
               <div className="single-doctor">
                 <div className="doctor-profile">
-                  <img src={Santa} alt="" />
+                  <img src="https://i.ibb.co/frv5XnH/doctor3.png" alt="" />
                 </div>
                 <div className="doctor-info">
                   <h3>Santa Binte</h3>

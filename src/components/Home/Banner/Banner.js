@@ -11,7 +11,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100 banner-image"
-      src="https://www.dentalhealth.org/handlers/getimage.ashx?idmf=47e97e00-bd2c-4619-af6d-03bf953c557b&w=1200&h=350&f=1"
+      src="https://i.ibb.co/4VpFnLb/getimage-ashx-idmf-47e97e00-bd2c-4619-af6d-03bf953c557b-w-1200-h-350-f-1-cf-chl-captcha-tk.png"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -22,7 +22,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100 banner-image"
-      src="https://www.dentalhealth.org/handlers/getimage.ashx?idmf=42b69bf3-6565-4022-aa1e-4254624680e7&w=1200&h=350&f=1"
+      src="https://i.ibb.co/Xtbgc9L/getimage.jpg"
       alt="Second slide"
     />
 
@@ -34,7 +34,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100 banner-image"
-      src="https://www.dentalhealth.org/handlers/getimage.ashx?idmf=25da7dd0-0f89-4f2e-9dba-24005bffbb31&w=1200&h=350&f=1"
+      src="https://i.ibb.co/pjDsQ6C/getimage.jpg"
       alt="Third slide"
     />
 

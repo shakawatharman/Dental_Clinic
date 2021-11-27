@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import Image from "../../resources/illustration.jpg";
 
 const Register = () => {
   const { googleSignIn, registerWithEmail } = useAuth();
@@ -35,7 +34,7 @@ const Register = () => {
     <div className="container p-5">
       <div className="row  justify-content-center">
         <div className="col-md-6">
-          <img src={Image} alt="" />
+          <img src="https://i.ibb.co/wY82WjW/illustration.jpg" alt="" />
         </div>
         <div className="col-md-6 col-sm-12 shadow p-3 text-center">
           <Form onSubmit={handleRegister} className="my-5">

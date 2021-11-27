@@ -27,8 +27,9 @@
             transform: translateX(-50%);
     z-index: 4;
 }
+/* fc5185 */
 .doctor-profile::before {
-    background: #fc5185;
+    background: rgba(0, 0, 255, 0.699);
     position: absolute;
     left: 0;
     width: 100%;
